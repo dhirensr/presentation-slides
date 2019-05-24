@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- author :Dhiren Serai -->
+		<title>Machine Learning For Programming Slides </title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/sky.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				  <section>
+              <h4> Deep Learning Code Fragments for Code Clone Detection</h4>
+              <p style="font-size:24px"> Paper by Martin White, Michele Tufano, Christopher Vendome, and Denys Poshyvanyk</p>
+              <p style="font-size:24px"> Presented by : Dhiren Devinder Serai <br>
+                  under the supervision of Jibesh Patra
+              </p>
+          </section>
+          <section>
+              <p> What does Code Clone / Duplicate Code mean?
+	                <p class="fragment" data-fragment-index="1" style="font-size:30px;">Duplicate code is a computer programming term for a sequence of source code that occurs more than once, either within a program or across different programs owned or maintained by the same entity.
+                      <br>
+                      <br> source : Wikipedia</p>
+          </section>
+				  <section><h5>Type of Clones  </h5>
+              <section>
+                  <p style="font-size:30px">
+                  In this paper they classify as four clone types.
+                  <br><br>
+                  Type I clones:
+                  Identicalfragments except for variations in comments and layout
+                  <br>
+                  <img src="/images/type-1clone.png" height="400" width="400">
+              </p>
+              </section>
+                  <section>
+                      <p style="font-size:30px">
+                          Type II clones:
+                          Identical fragments except for variations in iden-tifier names and literal values in addition to Type I differences
+                          <br>
+                          <img src="/images/type2-clone.png" height="400" width="400">
+                  </section>
+                  <section>
+                      <p style="font-size:30px">
+                          Type III clones:
+                          Syntactically similar fragments that differ at the statement level
+                          <br>
+                          <img src="/images/type3-clone.png" height="400" width="400">
+                  </section>
+                  <section>
+                      <p style="font-size:30px">
+                          Type IV clones:
+                          Syntactically dissimilar fragments that implement the same functionality
+                          <br>
+                          <img src="/images/type-4clone.png" height="400" width="400">
+                  </section>
+          </section>
+          <section>
+          <section data-transition="zoom">
+	            <h5> Why do we need Softwares for Code Clone Detection? </h5>
+          </section>
+          <section>
+              <h5> There are many reasons why we need to detect code clones</h5>
+              <br>
+              <p style="font-size:30px"> Some of them are listed below:
+                  <ol style="font-size:30px">
+                      <li>To detect plagariasm in codebase</li>
+                      <li> There can be bugs caused by two code clones</li>
+                      <li>Searching for Refactoring code when the codebase is too big</li>
+                  </ol>
+              </p>
+          </section>
+          </section>
+          <section>
+          <section>
+              <h4> Deep Learning Based Code Clone Detection
+              </h4>
+              <p style="font-size:30px">
+                  The approach uses Deep Learning namely two Recurrent Neural Networks to detect clones.
+                  <br><br>
+                  This approach is different from the other approaches because it does not depend on <b>handcrafted features </b> to represent code.
+              </p>
+          </section>
+          <section>
+              <p style="font-size:30px">
+              The other approaches depends on features like :
+                  <ul style="font-size:30px">
+                      <li> Frequency of Words</li>
+                      <li> Indentation pattern</li>
+                      <li>Length of fragments in source code</li>
+                  </ul>
+              </p>
+          </section>
+          </section>
+          <section>
+              <h4> Deep Learning Based Code Clone Detection Approach
+              </h4>
+              <br>
+              <img src="/images/ml4p_1.png" height="400" width="400">
+          </section>
+          <section>
+              <section>
+                  <h4> Results </h4>
+              <p style="font-size:20px">
+                  Data was collected From Various Java systems <br>
+                  <br>
+                  Examined the following Questions : <br>
+                  <b>RQ1 </b> Are our representations suitable for detecting fragments that are similar with respect to a clone type?
+                  <br>
+                  <b>RQ2</b> Is there evidence that our compositional, learningbased approach is capable of recognizing clones that
+                  are undetected or suboptimally reported by a traditional, structure-oriented technique?
+
+              </p>
+          </section>
+          <section>
+              <h4> Results </h4>
+              <img src="/images/validation_results.png" height="300" width="500">
+          </section>
+          </section>
+          <section>
+              <h4> Conclusion </h4>
+              <ul style="font-size:30px">
+                  <li> Code clones are sometimes difficult to detect but are very important to find for Softwares.</li>
+                  <li> Learning based clone detection instead of handcrafted features</li>
+                  <li> Learning based clone detection using two Recurrent Neural Networks and overall had a good accuracy.</li>
+              </ul>
+          </section>
+          <section>
+              <h4> Thank you . </h4>
+              <br>
+              <h4> Questions ? </h4>
+          </section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+		 // More info about config & dependencies:
+		 // - https://github.com/hakimel/reveal.js#configuration
+		 // - https://github.com/hakimel/reveal.js#dependencies
+		 Reveal.initialize({
+				 dependencies: [
+					   { src: 'plugin/markdown/marked.js' },
+					   { src: 'plugin/markdown/markdown.js' },
+					   { src: 'plugin/notes/notes.js', async: true },
+					   { src: 'plugin/highlight/highlight.js', async: true }
+				 ]
+		 });
+     Reveal.configure({ slideNumber: true });
+     Reveal.configure({ slideNumber: 'c/t' });
+		</script>
+	</body>
+</html>
