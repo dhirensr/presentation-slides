@@ -109,10 +109,52 @@
           </section>
           </section>
           <section>
-              <h4> Deep Learning Based Code Clone Detection Approach
-              </h4>
-              <br>
-              <img src="images/ml4p_1.png" height="400" width="400">
+              <section>
+                  <h4> Deep Learning Based Code Clone Detection Approach </h4>
+                  <br>
+                  <img src="images/ml4p_1.png" height="400" width="400">
+              </section>
+              <section>
+                  <h6>ast2bin</h6>
+                  <p style="font-size:24px">
+                      AST's can have any number of levels comprising nodes with arbitrary degree.ast2bin converts abstract syntax trees into full binary trees with node lengths of either 0 or 2.
+                      <img src="images/treenodes_cases.png">
+                  </p>
+              </section>
+              <section>
+                  <h6> Case II : Tree with nodes of degree more than 2 </h6>
+                  <p style="font-size:24px">
+                      Uses a grammar to handle nodes with degree greater than two <br>
+                      <img src="images/case2.png">
+                  </p>
+              </section>
+              <section>
+                  <h6> Case I : Tree with nodes of degree 1 </h6>
+                  <p style="font-size:24px">
+                      Uses a precedence table to handle nodes with degree one <br>
+                      <img src="images/precedence-table.png">
+                  </p>
+              </section>
+              <section>
+                  <h6> Lexical Level </h6>
+                  <br>
+                  <p style="font-size:24px">
+                      The input vector is denoted as x and z is the hidden layer and y is the output layer.<br>
+                      <img src="images/lexical_level.png" height="300" width="300">
+                      <br>
+                      The final output layer equation looks like: <br>
+                      <img src="images/equation.png">
+                  </p>
+              </section>
+              <section>
+                  <h6> Syntactical Level </h6>
+                  <p style="font-size:24px">
+                      <b>Recursive Autoencoders</b> <br>
+                      AST-based vs Greedy <br>
+                      <img src="images/syntactic_approaches.png" height="300" width="400">
+
+                  </p>
+              </section>
           </section>
           <section>
               <section>
@@ -127,11 +169,31 @@
                   are undetected or suboptimally reported by a traditional, structure-oriented technique?
 
               </p>
+              </section>
+              <section>
+                  <h4> Results </h4>
+                  <p style="font-size:20px">
+                      <ul style="font-size:30px">
+                          <li>Compared against Deckard which is a software for code clone detection.</li>
+
+                          <li> To evaluate the models there were two Ph.D students selected.</li>
+                          <li> Evaluation had to be done manually because there was no oracle.</li>
+                      </ul>
+                  </p>
+              </section>
+              <section>
+                  <h4> Results </h4>
+                  <img src="images/validation_results.png" height="300" width="500">
+              </section>
           </section>
           <section>
-              <h4> Results </h4>
-              <img src="images/validation_results.png" height="300" width="500">
-          </section>
+              <h4> Lessons Learned </h4>
+              <ul style="font-size:30px">
+                  <li> Files having more than 4000 lexical elements were removed however this threshold was not sufficient. </li>
+                  <li> Large files slowed the training of the model. </li>
+                  <li> Files could have been sorted by size so the training time would have been reduced.</li>
+                  <li>The model could detect some clone which the prominent tool Deckard could not.</li>
+              </ul>
           </section>
           <section>
               <h4> Conclusion </h4>
